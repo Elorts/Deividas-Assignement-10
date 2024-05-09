@@ -30,8 +30,6 @@ public class MealPlannerController {
 
         return response;
 
-
-
     }
 
     @GetMapping("mealplanner/day")
