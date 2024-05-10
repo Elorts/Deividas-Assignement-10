@@ -23,13 +23,14 @@ public class MealPlannerController {
 
         RestTemplate rt = new RestTemplate();
 
+        //"https://api.spoonacular.com/mealplanner/generate"
         URI uri = UriComponentsBuilder.fromHttpUrl(apiUrl)
                 .queryParam("timeFrame", "week")
                 .queryParam("apiKey", "52008d4850ec4abcbd7b3bfe88f99ffc")
                 .build()
                 .toUri();
 
-        ResponseEntity<SpoonacularResponseWeek> response = rt.getForEntity(uri, SpoonacularResponseWeek.class);
+        ResponseEntity<SpoonacularResponseWeek> response =  rt.getForEntity(uri, SpoonacularResponseWeek.class);
         System.out.println(response.getBody());
 
         return response;
@@ -47,7 +48,7 @@ public class MealPlannerController {
                 .build()
                 .toUri();
 
-        ResponseEntity<SpoonacularResponseDay> response = rt.getForEntity(uri, SpoonacularResponseDay.class);
+        ResponseEntity<SpoonacularResponseDay> response =  rt.getForEntity(uri, SpoonacularResponseDay.class);
         System.out.println(response.getBody());
 
         return response;
