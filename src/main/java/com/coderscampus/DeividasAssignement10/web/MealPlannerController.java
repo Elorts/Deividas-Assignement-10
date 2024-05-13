@@ -17,7 +17,7 @@ public class MealPlannerController {
     @Value("${myapp.api.url}")
     private String apiUrl;
 
-    @GetMapping("mealplanner/week")
+    @GetMapping("mealplanner/week") 
     public ResponseEntity<SpoonacularResponseWeek> getWeekMeals(String numCalories, String diet, String exclusions) {
 
 
