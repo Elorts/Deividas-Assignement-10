@@ -27,11 +27,14 @@ public class MealPlannerController {
         URI uri = UriComponentsBuilder.fromHttpUrl(apiUrl)
                 .queryParam("timeFrame", "week")
                 .queryParam("apiKey", "52008d4850ec4abcbd7b3bfe88f99ffc")
+                .queryParam("targetCalories", numCalories)
+                .queryParam("diet", diet)
+                .queryParam("exclude", exclusions)
                 .build()
                 .toUri();
 
         ResponseEntity<SpoonacularResponseWeek> response =  rt.getForEntity(uri, SpoonacularResponseWeek.class);
-        System.out.println(response.getBody());
+        //System.out.println(response.getBody());
 
         return response;
 
@@ -45,11 +48,14 @@ public class MealPlannerController {
         URI uri = UriComponentsBuilder.fromHttpUrl(apiUrl)
                 .queryParam("timeFrame", "day")
                 .queryParam("apiKey", "52008d4850ec4abcbd7b3bfe88f99ffc")
+                .queryParam("targetCalories", numCalories)
+                .queryParam("diet", diet)
+                .queryParam("exclude", exclusions)
                 .build()
                 .toUri();
 
         ResponseEntity<SpoonacularResponseDay> response =  rt.getForEntity(uri, SpoonacularResponseDay.class);
-        System.out.println(response.getBody());
+        //System.out.println(response.getBody());
 
         return response;
     }
