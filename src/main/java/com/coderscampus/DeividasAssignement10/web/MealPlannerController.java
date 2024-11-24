@@ -33,7 +33,6 @@ public class MealPlannerController {
                 .toUri();
 
         ResponseEntity<SpoonacularResponseWeek> response =  rt.getForEntity(uri, SpoonacularResponseWeek.class);
-        //System.out.println(response.getBody());
 
         return response;
 
