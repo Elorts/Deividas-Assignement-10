@@ -2,7 +2,9 @@ package com.coderscampus.DeividasAssignement10.web;
 
 import com.coderscampus.DeividasAssignement10.dto.SpoonacularResponseDay;
 import com.coderscampus.DeividasAssignement10.dto.SpoonacularResponseWeek;
+
 import org.springframework.beans.factory.annotation.Value;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,7 +37,6 @@ public class MealPlannerController {
         ResponseEntity<SpoonacularResponseWeek> response =  rt.getForEntity(uri, SpoonacularResponseWeek.class);
 
         return response;
-
     }
 
     @GetMapping("mealplanner/day")
@@ -53,8 +54,6 @@ public class MealPlannerController {
                 .toUri();
 
         ResponseEntity<SpoonacularResponseDay> response =  rt.getForEntity(uri, SpoonacularResponseDay.class);
-        //System.out.println(response.getBody());
-
         return response;
     }
 }
