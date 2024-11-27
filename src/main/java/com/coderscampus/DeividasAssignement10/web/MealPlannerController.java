@@ -21,7 +21,6 @@ public class MealPlannerController {
     @GetMapping("mealplanner/week") 
     public ResponseEntity<SpoonacularResponseWeek> getWeekMeals(String numCalories, String diet, String exclusions) {
 
-
         RestTemplate rt = new RestTemplate();
 
         //"https://api.spoonacular.com/mealplanner/generate"
