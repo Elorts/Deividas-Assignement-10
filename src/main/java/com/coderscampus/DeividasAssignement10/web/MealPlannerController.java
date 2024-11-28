@@ -39,7 +39,6 @@ public class MealPlannerController {
 
     @GetMapping("mealplanner/day")
     public ResponseEntity<SpoonacularResponseDay> getDayMeals(String numCalories, String diet, String exclusions) {
-
         RestTemplate rt = new RestTemplate();
 
         URI uri = UriComponentsBuilder.fromHttpUrl(apiUrl)
