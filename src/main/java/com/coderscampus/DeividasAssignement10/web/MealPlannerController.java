@@ -2,7 +2,6 @@ package com.coderscampus.DeividasAssignement10.web;
 
 import com.coderscampus.DeividasAssignement10.dto.SpoonacularResponseDay;
 import com.coderscampus.DeividasAssignement10.dto.SpoonacularResponseWeek;
-
 import org.springframework.beans.factory.annotation.Value;
 
 import org.springframework.http.ResponseEntity;
